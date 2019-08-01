@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fauzy Home</title>
+    <link rel="shortcut icon" href="img/tab.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .background{
+            width: 100%;
+            opacity: 0.5;
+            position: absolute;
+            z-index: -4;
+            margin-left:-8px;
+            margin-top:-8px;            
+        }
+        
+        .btn {
+            float: right;
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+/* On mouse-over */
+    .btn:hover {background: #eee;}
+
+    .home {color: darkgreen;}
+    .about {color: darkblue;}
+    .contact {color: darkgoldenrod;}
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+    @media screen and (max-width: 500px) {
+    .btn {
+        float: none;
+        display: block;
+    }
+    }
+    </style>
+</head>
+
+<body>
+    <img class="background" src="img/sunrise.jpg" alt="No Images">
+    <header>
+        <button class="btn about"><i class="fa fa-user"></i>About Me</button>
+        <button class="btn contact"><i class="fa fa-envelope"></i>Contact</button>
+        <button class="btn home"><i class="fa fa-home"></i>Home</button>
+    </header>
+
+
+</body>
+</html>
