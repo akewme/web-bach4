@@ -12,9 +12,19 @@
         margin: 0;
     } 
     body {
-        background-color: aqua;
+        /* background-color: aqua; */
+        overflow: hidden;
+    }
+    
+    .bg-img{
+        opacity: 0.5;
+        width: 100%;
+        z-index: -2;
+        position: absolute
     }
     header {
+        background-color: orange;
+        opacity: 0.8;
         height: 20px;
         padding: 12px 5%;
     }
@@ -24,30 +34,30 @@
         padding: 4px 8px;
         font-size: 16px;
     }
-    .logo
+    .logo,
     .nav-left{
         float: left;
     }
-    .
-/*     
-    body {
-        background:#b2fcff
-         }
-    .warna-biru {
-         color: #3e64ff
-         }
-    .underline {
-        text-decoration : underline
+    
+    .nav-right{
+        float: right;
+        text-align: right
+    
     }
-    #biru-muda {
-        color: #5edfff
-    } */
-    /* .warna-merah{
-        color: #FF0000
-    } */
+
+    .nav-left,
+    .nav-right{
+        width : 40%
+    }
+   .logo{
+       width: 20%;
+       text-align: center
+   }
     </style>
 </head>
 <body>
+    <img class="bg-img"
+    src="picture/Pulau-Tidung.jpg">
     <header>
         <nav>
              <div class="nav-left">
@@ -57,7 +67,7 @@
              </div>
              <div class="logo">
                  <a href="#">
-                     <img width="70px" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj-uJ-PlN_jAhUC448KHWROB-sQjRx6BAgBEAU&url=https%3A%2F%2Fid.wikipedia.org%2Fwiki%2FBerkas%3ALogo-Universitas-Siliwangi.png&psig=AOvVaw0elgv6Kt3UE6_2waPmLGra&ust=1564662479083740" alt="Gambar Kosong">
+                     <img width="70px" src="http://yucoding.com/yucoding-assets/img/brand/blue.png">
                  </a>
              </div>
              <div class="nav-right">
