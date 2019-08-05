@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fauzy Home</title>
+    <link rel="shortcut icon" href="img/tab.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="aboutme.html">
+
+    <style>
+        body{
+            background-color: black;
+        }
+        /* .background{
+            width: 100%;
+            opacity: 0.5;
+            position:fixed;
+            z-index: -4;
+            margin-left:-8px;
+            margin-top:-8px;        
+        } */
+        
+        .btn {
+            float: left;
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .foto{
+            height: 500px;
+            width: 650px;
+            float: right;
+            margin-top: 10%;
+            margin-right: 40px; 
+        }
+
+        .padding{
+            padding-top: 200px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            padding-left: 50px;
+        }
+
+        h2{
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+        }
+
+        h1{
+            color:#f7be16;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 60px;
+        }
+
+      
+/* On mouse-over */
+    .btn:hover {background: #49beb7;}
+
+    .home . {color: black;}
+    .about {color: black;}
+    .contact {color: black;}
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+    @media screen and (max-width: 500px) {
+    .btn {
+        float: none;
+        display: block;
+    }
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+    <!-- <img class="background" src="img/sunrise.jpg" alt="No Images"> -->
+    <header>
+        <button class="btn home"><i class="fa fa-home"></i>Home</button>
+        <button class="btn about"><i class="fa fa-user"></i>About Me</button>
+        <button class="btn contact"><i class="fa fa-envelope"></i>Contact</button>
+    </header>
+    </div>
+    
+    <img class="foto" src="img/web.jpg">
+<div class="padding">
+    <h2>Hello, I'am</h2>
+    <h1>Fahmi Ahmad Fauzi</h1>
+
+</div>
+</body>
+</html>
