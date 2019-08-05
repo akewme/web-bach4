@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0%;
+    }
+.bg-img{
+    opacity: 0.6;
+    width: 100%;
+    z-index: -2;
+    position: absolute
+}
+
+/* Style the navigation bar */
+        .nav-right {
+          width: 100%;
+          background-color: #555;
+          overflow: auto;
+          position: fixed
+        }
+        
+        /* Navbar links */
+        .nav-right a {
+          float: right;
+          text-align: center;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .photo{
+            position: absolute;
+            right: 120px;
+            top:230px;
+            
+        }
+        .serif {
+        font-family: "DanielScript Thin";
+        }
+
+        .sansserif {
+        font-family: "Bird of Paradise Personal use Reguler" ;
+        }
+
+        /* Navbar links on mouse-over */
+        .nav-right a:hover {
+          background-color: #000;
+        }
+        
+        .padding{
+            padding-top: 180px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            padding-left: 100px;
+        }
+
+        .nav-right{
+        float: right;
+        text-align: right
+        }
+        /* Current/active navbar link */
+        .active {
+          background-color: rgb(211, 133, 43);
+        }
+        
+        /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+        @media screen and (max-width: 500px) {
+          .nav-right a {
+            float: none;
+            display: block;
+          }
+        }</style>
+</head>
+<body>
+    <img class="bg-img" src="picture/citylight.jpg">
+    <!-- Load an icon library -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<div class="nav-right"> 
+  <a href="#"><img width="19px" src="picture/guest.png"></i> Follow Me</a>
+  <a href="#"><img width="19px" src="picture/book.png"></i> My Life</a>
+  <a href="about.html"><img width="19px" src="picture/about.png"></i> About</a>
+  <a class="active" href="contact.html"><img width="20px" src="picture/contact.png"></i> Contact</a> 
+  <a href="index.html"><img width="19px" src="picture/home.png"></> Home</a>
+</div>
+
+</body>
+</html>
