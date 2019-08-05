@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/anuraghazra/VerlyRangeSlider@v1.0.0/src/style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.2.0/dist/verly.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anuraghazra/VerlyRangeSlider@v1.0.2/src/VerlyRange.js"></script>
+    <style>
+        body {
+            margin: 50px !important;
+        }
+
+        @media screen and (max-height: 350px) {
+            p {
+                margin: 5px 0;
+            }
+
+            label {
+                margin-top: 0 !important;
+            }
+
+            body {
+                margin: 0px 20px !important;
+            }
+
+            h1 {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="wrapper">
+
+        <h1>Verly Range Slider</h1>
+
+        <section class="all-sliders">
+            <label class="slidecontainer first">
+                <span>Juicy Purple</span>
+                <input class="slider" id="range-slider" type="range" min="1" step="0.01" max="100" value="80">
+            </label>
+
+            <label class="slidecontainer second">
+                <span>Lovely Pink</span>
+                <input class="slider" id="range-slider2" type="range" min="1" step="0.01" max="100" value="20">
+            </label>
+        </section>
+
+        <p>
+            Verly range slider is made with
+            <a target="__blank" href="https://github.com/anuraghazra/Verly.js">Verly.js</a>
+        </p>
+
+        <p>
+            Made with
+            <span style="color: #eb375b">❤</span> and Javascript by
+            <a target="__blank" href="http://anuraghazra.github.io">Anurag Hazra</a>
+        </p>
+        <p>check it out at <a target="__blank" href="https://github.com/anuraghazra/VerlyRangeSlider">Github</a></p>
+    </main>
+</body>
+<script>
+    VerlyRange("range-slider", "#655ecf");
+    VerlyRange("range-slider2", "#eb3992");
+</script>
+
+</html>
