@@ -17,15 +17,14 @@
 
         body {
             background: #b2fcff;
-            ;
         }
 
-        .bg-img {
+        /* .bg-img {
             opacity: 0.5;
             width: 100%;
             z-index: -2;
             position: absolute
-        }
+        } */
 
         header {
             background: #b2fcff;
@@ -61,11 +60,7 @@
             text-align: center
         }
 
-        .nav-mobile {
-            display: none
-        }
-
-
+        /* Icon Menu di hide ketika di akses di destop app */
         main {
             padding: 5%
         }
@@ -78,9 +73,30 @@
         }
 
         .profile img {
-            width: 80%
+            width: 80%;
+            padding: 0 10%
         }
 
+
+        .hello h6,
+        .hello h1,
+        .hello p {
+            padding: 20px;
+        }
+
+        .hello h6 {
+            font-size: 20px;
+        }
+
+        .hello h1 {
+            font-size: 50px;
+        }
+
+        .hello p {
+            font-size: 16px;
+        }
+
+        /* Btn Contact Me Style */
         .btn-action {
             background: #02575a;
             color: white;
@@ -92,21 +108,6 @@
 
         .btn-action:hover {
             opacity: .8;
-        }
-
-        .hello h6 {
-            font-size: 20px;
-            padding: 20px;
-        }
-
-        .hello h1 {
-            font-size: 50px;
-            padding: 20px;
-        }
-
-        .hello p {
-            font-size: 16px;
-            padding: 20px;
         }
 
         .aboutme {
@@ -121,6 +122,10 @@
             height: 480px
         }
 
+        .nav-mobile {
+            display: none
+        }
+
         @media (max-width:600px) {
 
             .nav-desktop {
@@ -129,38 +134,6 @@
 
             .nav-mobile {
                 display: block
-            }
-
-            .active-menu {
-                display: block;
-                position: fixed;
-                top: 0;
-                left: 0;
-                background: #fff;
-                height: 100%;
-                width: 80%;
-                transition: 1s;
-            }
-
-            .active-menu .nav-left,
-            .active-menu .nav-left a,
-            .active-menu .nav-right {
-                width: 100%;
-                float: left;
-                padding: 10px;
-            }
-
-            .active-menu .nav-left {
-                padding-top: 50px
-            }
-
-            .active-menu .nav-right {
-                text-align: left
-            }
-
-            .active-menu .logo {
-                padding: 10px;
-                position: absolute
             }
 
             .hello,
@@ -188,7 +161,37 @@
                 height: 200px
             }
 
+            .active-menu {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: #fff;
+                height: 100%;
+                width: 70%;
+                transition: 1s;
+            }
 
+            .active-menu .nav-left,
+            .active-menu .nav-left a,
+            .active-menu .nav-right {
+                width: 100%;
+                float: left;
+                padding: 10px;
+            }
+
+            .active-menu .nav-left {
+                padding-top: 50px
+            }
+
+            .active-menu .nav-right {
+                text-align: left
+            }
+
+            .active-menu .logo {
+                padding: 10px;
+                position: absolute
+            }
         }
     </style>
 
@@ -213,9 +216,8 @@
                         d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
                 </svg>
             </a>
-
         </nav>
-        <nav id="menu-mebile" class="nav-desktop ">
+        <nav id="menu-mebile" class="nav-desktop">
             <div class="nav-left">
                 <a href="#">How It Work</a>
                 <a href="#">Community</a>
@@ -259,21 +261,6 @@
         </section>
 
     </main>
-    <!-- <h1 class="warna-biru underline">Hello Yucoding</h1>
-    <h2>
-        <span class="warna-hijau">Hello</span>
-        Yucoding
-    </h2>
-    <h3 id="biru-muda" class="underline">Hello Yucoding</h3>
-    <h4>Hello Yucoding</h4>
-    <h5>Hello Yucoding</h5>
-    <h6>Hello Yucoding</h6>
-    <p>Paragraf</p>
-    <b>Tebal</b>
-    <br>
-    <hr>
-    <i>Tebal</i> -->
-
     <script>
         function openMenu() {
             var menu = document.getElementById("menu-mebile");
