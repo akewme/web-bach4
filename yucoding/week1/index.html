@@ -17,6 +17,7 @@
 
         body {
             background: #b2fcff;
+            ;
         }
 
         .bg-img {
@@ -30,6 +31,7 @@
             background: #b2fcff;
             height: 20px;
             padding: 20px 5%;
+            z-index: 1000
         }
 
         a {
@@ -63,7 +65,64 @@
             display: none
         }
 
+
+        main {
+            padding: 5%
+        }
+
+        .hello,
+        .profile {
+            width: 50%;
+            float: left;
+
+        }
+
+        .profile img {
+            width: 80%
+        }
+
+        .btn-action {
+            background: #02575a;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-size: 17px;
+            margin: 24px 20px;
+        }
+
+        .btn-action:hover {
+            opacity: .8;
+        }
+
+        .hello h6 {
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .hello h1 {
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        .hello p {
+            font-size: 16px;
+            padding: 20px;
+        }
+
+        .aboutme {
+            text-align: center;
+            float: left;
+            width: 80%;
+            padding: 10%
+        }
+
+        .youtube {
+            width: 100%;
+            height: 480px
+        }
+
         @media (max-width:600px) {
+
             .nav-desktop {
                 display: none;
             }
@@ -99,11 +158,37 @@
                 text-align: left
             }
 
-
             .active-menu .logo {
                 padding: 10px;
                 position: absolute
             }
+
+            .hello,
+            .profile {
+                width: 100%;
+            }
+
+            .hello {
+                margin-top: -30px;
+                text-align: center;
+            }
+
+            .profile {
+                display: none
+            }
+
+            .aboutme {
+                margin-top: 50px;
+                width: 100%;
+                padding: 0
+            }
+
+            .youtube {
+                width: 100%;
+                height: 200px
+            }
+
+
         }
     </style>
 
@@ -112,8 +197,9 @@
 <!-- <body style="background: #b2fcff" > -->
 
 <body>
-    <img class="bg-img"
+    <!-- <img class="bg-img"
         src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1563221883/CSS_Tricks_Sidebar_banner_2.1_zgad1c.jpg">
+    -->
     <header>
         <nav class="nav-mobile">
             <a href="#">
@@ -146,7 +232,33 @@
         </nav>
     </header>
 
+    <main>
+        <section class="hello">
+            <br>
+            <br>
+            <br>
+            <h6>Hi Yucoder!</h6>
+            <h1>My Name's Ari Bahtiar</h1>
+            <p>FullStack Developer</p>
+            <br>
+            <a class="btn-action" href="#">
+                Contact Me
+            </a>
+        </section>
 
+        <section class="profile">
+            <img src="../profile.png" alt="profile.png">
+        </section>
+
+        <section class="aboutme">
+            <br>
+            <h1>About Me</h1>
+            <br>
+            <iframe class="youtube" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </section>
+
+    </main>
     <!-- <h1 class="warna-biru underline">Hello Yucoding</h1>
     <h2>
         <span class="warna-hijau">Hello</span>
