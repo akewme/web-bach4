@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0, initial-scale=1.0">
-    <title>Document</title>
+<title>HOME</title>
     <style>
         * {margin: 0; 
             box-sizing:border-box;
             }
-        body {background: #00293c;}  
+        body {
+	background: #00293c;
+	background-color: #00283B;
+}  
         header {background: #2e656d; height: 60px; padding: 20px 6%;}
         a { text-decoration: none; color: white; padding: 10px 5%; font-size: 16px}
         .logo, .nav-left {float: left; }
         .nav-right {float: right; text-align: right;}
         .nav-left, .nav-right {width: 30%; }
         .logo {width: 10%; }
-        img1 {width: 350px; height: 350px; border-radius: 50%;}
+        img {width: 420px; height: 420px; border-radius: 50%; float: right; margin: 140px }
+        p{ text-transform: uppercase; font-size: 25px; font-family:'Colonna MT'; color: white; margin: 190px}
+        h1{text-transform: uppercase; font-size: 20px; font-family: "Lucida Bright"; color: white; margin: 190px;}
         
         /* header{
             background: #213453;
@@ -29,6 +34,13 @@
             font-size: 16px;
             float: left;
         }     */
+        #h1-saya { position: absolute; width: 684px; height: 337px; z-index: 1; left: 7px; top: 217px; }
+        #form { position: absolute; width: 200px; height: 41px; z-index: 2; left: 168px; top: 305px; text-align: center;
+	        background-color: #00283B; }
+        #h1-saya #form form #register { font-size: 18px; font-weight: 300; background-color: #333; color: #000;}
+    body,td,th {
+	color: #FFFFFF;
+}
     </style>
     <script>
 
@@ -36,14 +48,14 @@
 </head>
 <body>
     <header>
-            <div class="logo nav-left">
-                        <img width="100px" src="./inisial.png" alt="">
-                </div>
+            <!-- <div class="logo nav-left">
+                        <img width="100px" src="img/inisial.png" align="left">
+                </div> -->
         <div class="nav-left">
                 
             <a href="">HOME</a>
-            <a href="">ABOUT</a>
-            <a href="">FORTOFOLIO</a>
+            <a href="About.html">ABOUT</a>
+            <a href="Fortofolio.html">FORTOFOLIO</a>
         </div>
         
         <div class="nav-right">
@@ -52,10 +64,24 @@
         </div>
     </header>
     <body>
-        <div class="img1" ><img src="IMG-20180607-WA0031.jpg"; ></div>
+    <div class="img.kanan"><img src="img/IMG-20180607-WA0031.jpg"; align="cebter"; }></div>
+        <div>
+            
+            <p> <i class="fa fa-align-center"> Assalamu'alaikum </i> </br> Saya </br> Melanda Tiara Komala 
+            </br>
+            </p>
+            <div id="h1-saya">
+              <h1>saya <br>
+              seorang Junior Networking Komputer</h1>
+              <div id="form">
+                <form name="form1" method="post" action="">
+                <input type="submit" name="register" id="register" value="Register">
+                </form>
+              </div>
+              <h1>&nbsp;</h1>
+            </div>
+          
+</div>
     </body>
-    <footer>
-        <h3>'alaikum</h3>
-    </footer>
 </body>
 </html>
