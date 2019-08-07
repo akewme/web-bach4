@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="http://yucoding.com/yucoding-assets/img/brand/blue.png" type="image/x-icon">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background: #b2fcff;
+        }
+        .bg-img{
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            z-index: 0.5;
+            position: absolute;
+
+        }
+
+        header {
+            background: #3e64ff;
+            height: 40px;
+            padding: 12px 5%;
+            z-index: 1000;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 4px 8px;
+            font-size: 16px;
+        }
+
+        .logo,
+        .nav-left {
+            float: left;
+        }
+
+        .nav-right {
+            float: right;
+            text-align: right;
+        }
+
+        .nav-left,
+        .nav-right {
+            width: 40%
+        }
+
+        .logo {
+            width: 20%;
+            text-align: center
+        }
+        /* Icon menu hide */
+        main{
+            padding: 5%;
+        }
+        .hai, .sonic{
+            width: 50%;
+            float: left;
+        }
+        .sonic img{
+            width: 80%;
+            height: 420px;
+            border-radius: 40%;
+            float: right;
+            margin: 100px
+        }
+
+        .hai h6, h1, p{
+            padding: 20px
+        }
+        .hai h6{
+            font-size: 20px;
+        }
+        .hai h1{
+            font-size: 50px;
+        }
+        .hai p{
+            font-size: 16px;
+        }
+        .tentang{
+            margin-top: 50px;
+            height: 200px
+        }
+        
+        /* Btn  */
+        .btn-action{
+            background: darkslateblue;
+            color: black;
+            border-radius: 30px;
+            padding: 10px 30ps;
+            font-size: 17px;
+            margin: 24px 20px'
+        }
+        .btn-action:hover{
+            opacity: .8;
+        }
+        .tentang{
+            text-align: center;
+            float: left;
+            width: 80%;
+            padding: 10%;
+        }
+        .youtube{
+            width: 100%;
+            height: 480px;
+        }
+        .tabel{
+            text-align: left;
+            float: left;
+            width: 80%;
+            border-spacing: 50px;
+            padding: 20%;
+        }
+        
+        .nav-mobile{
+            display: none;
+        }
+
+        @media(max-width:600px){
+            .nav-desktop{
+                display: none;
+            }
+            .nav-mobile{
+                display: block
+            }
+            .hai .sonic{
+                width: 100%;
+            }
+            .hai {
+                margin-top: -30px;
+                text-align: center;
+            }
+            .sonic img{
+                display: none
+            }
+            .tentang{
+                margin-top: 50px;
+                width: 100%;
+                padding: 0
+            }
+            .youtube{
+                width: 100%;
+                height: 200px;
+            }
+            .tabel{
+                margin-top: 50px;
+                width: 100%;
+                padding: 10%;
+            }
+            .active-menu{
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: white;
+                height: 100%;
+                width: 70%;
+                transition: 1s;
+            }
+            .active-menu .nav-left, .active-menu .nav-left a,
+            .active-menu .nav-right{
+                width: 100%
+                float: left;
+                padding: 10px;
+            }
+            .active-menu .nav-left {
+                padding: 50px;
+            }
+            .active-menu .nav-right {
+                text-align: left;
+            }
+            .active-menu{
+                padding: 10px;
+                position: absolute;
+                
+            }
+        
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- <body style="background: #b2fcff"> -->
+        <!-- <img class="bg-img" src="../s.jpg"> -->
+        <header>
+            <nav class="nav-mobile">
+                <a href="#">
+                    <img alt="Logo" width="70px" src="http://yucoding.com/yucoding-assets/img/brand/blue.png">
+                </a>
+                <a onclick="OpenMenu()" href="#" style="float:right">
+                    <svg height="32px" id="layer_1" style="enable-background: new 0 0 32 32;" version="1.1"
+                        viewBox= "0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                    </svg>
+            </a>
+            </nav>
+            <nav id="menu-mobile" class="nav-desktop">
+                <div class="nav-left">
+                <a href="#">How it work</a>
+                <a href="#">Community</a>
+                <a href="#">Visit Our Salon</a>
+                </div>
+                <div class="logo">
+                    <a href="#">
+                        <img width="70px" src="http://yucoding.com/yucoding-assets/img/brand/blue.png" >
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <a href="#">About Yucoding</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="hai">
+                <br>
+                <br>
+                <br>
+                <h6> Hai Para Yukoder</h6>
+                <h1 > Saya Melanda Tiara</h1>
+                <p> Jasa Membuat Website</p>
+                <a class="btn-action" href=""> Langsung kontak saja</a>
+                <br>
+            </section>
+            <section class="sonic">
+                <img src="picture/IMG-20180607-WA0031.jpg" alt="Sonic.png">
+            </section>
+            <section class="tentang">
+                <br>
+                <h1>Tentang saya</h1>
+                <br>
+                <iframe class="youtube" src="https://www.youtube.com/embed/LqE_j0cBfng"></iframe>
+            </section>
+            <script>
+                function OpenMenu(){
+                    var menu = document.getElementById("menu-mobile");
+                    menu.classList.toggle("active-menu")
+                }
+            </script>
+            <section class="tabel">
+                <br><br>
+                    <h1>Hubungi saya</h1>
+                <br>
+                <div>
+                <form name="contact-form">
+                <span style="color: #666666; font-family: Arial,Helvetica,sans-serif; font-weight: 700;">
+                        <i class="fa fa-user"></i>Name 
+                    </span>
+                    <br> 
+                    <input id="ContactForm1_contact-form-name" name="name" size="30" type="text" value="">
+                    <br> <br> 
+                    <span style="color: #666666; font-family: Arial,Helvetica,sans-serif; font-weight: 700;">
+                         <i class="fa fa-envelope"></i>Email Address 
+                        <span style="color: #f56954; font-size: x-small; font-weight: bold;">important</span>
+                    </span> 
+                    <br> 
+                    <input id="ContactForm1_contact-form-email" name="email" size="30" type="text" value="">
+                         <br>
+                         <br>
+                    <span style="color: #666666; font-family: Arial,Helvetica,sans-serif; font-weight: 700;">
+                        <i class="fa fa-pencil-square-o"></i> Content 
+                    <span style="color: #f56954; font-size: x-small; font-weight: bold;">important
+                    </span>
+                </span>
+                <br> 
+                <textarea cols="25" id="ContactForm1_contact-form-email-message" name="email-message" rows="5"></textarea>
+                <br> 
+                <input id="ContactForm1_contact-form-submit" type="button" value="Send">
+                <br> 
+                <div style="max-width: 222px; text-align: center; width: 100%;">
+                    <div id="ContactForm1_contact-form-error-message" class="contact-form-error-message"></div>
+                    <div id="ContactForm1_contact-form-success-message" class="contact-form-success-message"></div>
+                </div> 
+                <center>
+                    <small>
+                         <a href="http://kangbar.blogspot.com/2015/05/cara-membuat-formulir-kontak-admin-keren-dengan-css.html" ></a>
+                        </a>
+                    </small>
+                </center> 
+                </form>
+                <br> 
+                <style scoped="" type="text/css"> #comments,.post_meta,#blog-pager {display:none;} 
+                        #ContactForm1_contact-form-name, #ContactForm1_contact-form-email{ width:100%;height:auto;margin:5px 
+                        auto;padding:10px;background:#fff;color:#444;border:1px solid #ddd;border-radius:3px;
+                        box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;transition:all 0.5s ease-out;} 
+                        #ContactForm1_contact-form-email-message{width:100%;height:175px;margin:5px 0;padding:10px;background:#fff;
+                        color:#444;font-family:'Open Sans',sans-serif;border:1px solid #ddd;border-radius:3px;transition:all 0.5s ease-out;} #ContactForm1_contact-form-name:focus, #ContactForm1_contact-form-email:focus, #ContactForm1_contact-form-email-message:focus{outline:none;background:#fff;color:#444;border-color:rgba(81,203,238,1);box-shadow:0 0 5px rgba(81,203,238,0.7);} #ContactForm1_contact-form-submit {width:100%;font-family:'Open Sans';float:left;background:#fff;color:#aaa;margin:10px auto;vertical-align:middle;cursor:pointer;padding:10px 18px!important;font-weight:700;font-size:14px;text-align:center;text-transform:uppercase;letter-spacing:0.5px;border-radius:3px;background-image: linear-gradient(110deg, #7986cb 0%, #7986cb 50%, transparent 50%, transparent 100%);background-size:200%;background-position:120% 0;background-repeat:no-repeat;border:1px solid #ddd;transition:all .8s ease, background-position .8s ease, color .8s ease;} #ContactForm1_contact-form-submit:hover {color:#fff;background-position:0 0;border-color:#7986cb;} #ContactForm1_contact-form-error-message, #ContactForm1_contact-form-success-message{ width:100%;margin-top:35px;} .contact-form-error-message-with-border {background:#f36c60;border:none;box-shadow:none;color:#fff;padding:5px 0;} .contact-form-success-message {background:#4fc3f7;border:none;box-shadow:none;color:#fff;} img.contact-form-cross {line-height:40px;margin-left:5px;} 
+                </style> <div style="clear:both;">
+            </div>
+               
+                
+            </section>
+            
+        </main>
+</body>
+</html>
