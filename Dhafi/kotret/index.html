@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Big Project</title>
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <style>
+    /* background */
+    body {
+            background: #ffff;
+            overflow-x: hidden;
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
+
+    .bg-img{
+        width: 100%;
+        z-index: -1000;
+        position: fixed;
+        filter: blur(4px);
+        -webkit-filter: blur(4px)
+    }
+
+/* header */
+    header{
+        height: 10px;
+        padding: 10px 5px;
+    }
+
+    a{
+        text-decoration: none;
+        color:darkblue;
+        padding: 4px 8px;
+        font-size: 18px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 30px;
+    }
+
+    .logo, menu-left{
+        float: left;
+    }
+
+    .menu-right{
+        float: right;
+        text-align: right;
+    }
+
+    .menu-left,
+    .menu-right {
+    width: 40%
+    }
+
+    .logo{
+        width:20%;
+        text-align: center;
+    }
+
+    .menu-left a:hover{
+        background: rgb(211, 133, 43);
+        color:antiquewhite;
+    }
+
+    .menu-right a:hover {
+        background: rgb(211, 133, 43);
+        color: antiquewhite;
+    }
+
+    .logo:hover{
+        opacity: .8;
+    }
+
+    /* button */
+        .btn-action{
+            background: darkblue;
+            color:cornsilk;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 17px;
+            margin: 24px 0px;
+        }
+
+    .btn-action:hover{
+        opacity: .8;
+        background: rgb(211, 133, 43);
+        color: darkblue
+    }
+
+    /* main */
+      main{
+      padding: 10% 4%;
+      }
+
+      .hello, .profile{
+          width: 50px;
+          float: left;
+      }
+
+      .profile img{
+          width: 70%;
+          padding: 0 30%;
+      }
+
+      .profile:hover{
+          opacity: .8;
+          anima
+      }
+
+      /* format gambar profile */
+      .flip-box {
+     background-color: transparent;
+     width: 300px;
+     height: 200px;
+     border: 1px solid #f1f1f1;
+     perspective: 1000px;
+    }
+
+    .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    }
+
+    .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    }
+
+    .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+    background-color: #bbb;
+    color: black;
+    }
+
+    .flip-box-back {
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+    } 
+
+    .hello h4{
+        font-size: 26px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #e7b385;
+    }
+
+    .hello h1{
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: -25px;
+        color: #ffff;
+    }
+
+    .hello h6{
+        font-size: 25px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top:-35px;
+        color:  rgb(211, 133, 43);
+    }
+
+    .hello h1:hover{
+        color: darkorange;
+        opacity: .5;
+    }
+
+    .aboutme {
+        text-align: center;
+        float: left;
+        color: #ffffff;
+        width: 80%;
+        padding: 10%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    }
+    .yt{
+        width: 80%;
+        height: 480%;
+    }
+
+    .nav-mobile{
+        display: none;
+    }
+
+    @media (max-width:600px) {
+
+        .nav-dekstop{
+            display: none;
+        }
+
+        .nav-mobile{
+            display: block;
+        }
+
+        .hello,
+        .profile{
+            width: 100%;
+        }
+
+        .hello {
+            margin-top: -30px;
+            text-align: center;
+        }
+
+        .profile{
+            display: none
+        }
+
+        .aboutme{
+            margin-top: 50px;
+            width: 100%;
+            padding: 0
+        }
+
+        .youtube{
+            width: 100%;
+            height: 200px;
+        }
+
+        .active-menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #ffff;
+            height: 100%;
+            width: 70%;
+            transition: 1s;
+        }
+
+        .active-menu .menu-left,
+        .active-menu .menu-left a,
+        .active-menu .menu-right {
+            width: 100%;
+            float: left;
+            padding: 10px
+        }
+
+        .active-menu .menu-left{
+            padding-top: 50px;
+        }
+
+        .active-menu .menu-right{
+            text-align: left
+        }
+
+        .active-menu .logo {
+            padding: 10px;
+            position: absolute
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <img class="bg-img" src="picture/view.jpg" alt="">
+    <header>
+        <nav class="nav-mobile">
+            <a href="#">
+                <img alt="Logo" width="70px" src="picture/dhafi.png">
+            </a>
+            <a onclick="openMenu()" href="#" style="float: right">
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                </svg>
+            </a>
+        </nav>
+        <nav id="menu-mebile" class="nav-dekstop">
+            <div class="menu-left">
+                <a href="#">How it Works</a>
+                <a href="#">Community</a>
+                <a href="#">Visit our Salon</a>
+            </div>
+
+            <div class="menu-right">
+                <a href="index.html">About me</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hello">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>Hello!!</h4>
+            <h1>My Name's Dhafi</h1>
+            <h6>I Know You are smart people</h6>
+            <br>
+            <a class="btn-action" href="form.html">Follow Me</a>
+    </section>
+
+    <section class="profile">
+        <img src="img/b1.png" alt="no image">
+    </section>
+
+    <section class="aboutme">
+        <h2>About Me</h2>
+        <br>
+
+            <iframe class="yt" src="https://www.youtube.com/watch?v=ISNBfryBkSo"></iframe>
+
+        </section>
+    </main>
+    <script>
+        function openMenu() {
+            var menu = document.getElementById("menu-mebile");
+            menu.classList.toggle("active-menu")
+        }
+    </script>
+</body>
+</html>
