@@ -4,39 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NYEK NTIRAMBALAP</title>
-    <link rel="shortcut icon" href="img/tab.png" type="image/x-icon">
+    <title>F A Uzy Home's</title>
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    
     <style>
+/* background */
         body {
-            /* background: #b2fcff; */
-
+            background: #fbc99d;
+            overflow-x: hidden;
         }
 
         .bg-img{
-            opacity: 0.6;
             width: 100%;
-            z-index: -2;
+            z-index: -1000;
             position: absolute;
-        }
-        .warna-biru{
-            color: #3e64ff
-        }
-        .warna-merah{
-            color: red
-        }
-        .underline{
-            text-decoration: underline
-        }
-        #biru-muda{
-            color: #5edfff
-        }
-        #merah-getih{
-            color: maroon
+            margin-top: -10px;
+            margin-left: -10px;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            filter: blur(5px);
+            -webkit-filter: blur(5px)
+            
+            
         }
 
+/* header */
         header{
             height: 10px;
             padding: 10px 5px;
@@ -44,14 +36,17 @@
 
         a{
             text-decoration: none;
-            color:white;
-            padding: 4px 8px;
+            color:#042f4b;
+            padding: 8px 12px;
             font-size: 18px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 30px;
         }
 
         .logo, .menu-left{
             float: left;
         }
+        
         .menu-right {
             float: right;
             text-align: right;
@@ -66,47 +61,244 @@
             width: 20%;
             text-align: center
         }
+
+        .menu-left a:hover{
+            background: #ed1250;
+            color: #fff6da
+        }
+
+        .menu-right a:hover{
+            background:#ed1250;
+            color: #fff6da;
+        }
+
+        .logo:hover{
+            opacity: .8;
+        }
+
+/* button */
+        .btn-action {
+            background: #042f4b;
+            color: #fff6da;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 17px;
+            margin: 24px 0px;
+        }
+
+        .btn-action:hover{
+            opacity: .8;
+            background: #ed1250;
+            color: #042f4b
+        }
+
+/* main */
+        main{
+            padding: 10% 4%;
+        }
+
+        .hello, .profile{
+            width: 50%;
+            float: left;
+        }
+
+        .profile img{
+            width: 70%;
+            padding: 0 30%;
+        }
+
+        .profile:hover{
+            opacity: .8;
+            animation: shake 0.5s; 
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+        
+        .hello h4{
+            font-size: 26px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:#fff6da;
+        }
+        .hello h1{
+            font-size: 50px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: -25px;
+            color: #042f4b;
+        }
+        .hello h6{
+            font-size: 25px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: -35px;
+            color:#ed1250;
+        }
+
+        .hello h1:hover{
+            color: #f7be16;
+            opacity: .5;
+        }
+
+        .aboutme {
+            text-align: center;
+            float: left;
+            color: #042f4b;
+            width: 80%;
+            padding: 10%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        .yt {
+            width: 80%;
+            height: 480px;
+        }
+
+        .nav-mobile{
+            display: none;
+        }
+
+    @media (max-width:600px) {
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-mobile {
+            display: block
+        }
+
+        .hello,
+        .profile {
+            width: 100%;
+        }
+
+        .hello {
+            margin-top: -30px;
+            text-align: center;
+        }
+
+        .profile {
+            display: none
+        }
+
+        .aboutme {
+            margin-top: 50px;
+            width: 100%;
+            padding: 0
+        }
+
+        .youtube {
+            width: 100%;
+            height: 200px
+        }
+
+        .active-menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+            height: 100%;
+            width: 70%;
+            transition: 1s;
+        }
+
+        .active-menu .menu-left,
+        .active-menu .menu-left a,
+        .active-menu .menu-right {
+            width: 100%;
+            float: left;
+            padding: 10px;
+        }
+
+        .active-menu .menu-left {
+            padding-top: 50px
+        }
+
+        .active-menu .menu-right {
+            text-align: left
+        }
+
+        .active-menu .logo {
+            padding: 10px;
+            position: absolute
+        }
+        }
     </style>
 
 </head>
-<!-- <body style="background: #b2fcff"> -->
-    
 <body>
-    <img class="bg-img" src="img/abc.jpg" alt="not image">
+    <img class="bg-img" src="img/bokeh2.jpg" alt="">
     <header>
-        <nav>
-            <div class="menu-left">
+            <header>
+                    <nav class="nav-mobile">
+                        <a href="#">
+                            <img alt="Logo" width="70px" src="img/tab.png">
+                        </a>
+                        <a onclick="openMenu()" href="#" style="float: right">
+                            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                                viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                            </svg>
+                        </a>
+                    </nav>
+            <nav id="menu-mebile" class="nav-desktop">
+                <div class="menu-left">
                 <a href="#">How it Works</a>
                 <a href="#">Community</a>
                 <a href="#">Visit our Salon</a>
-            </div>
+                </div>
             <div class="logo">
-                <a href="#">
-                    <img width="30px" src="http://pngriver.com/wp-content/uploads/2018/04/Download-Batman-Logo-PNG.png" alt="not file">
-                </a>
+                    <img width="50px" src="/Fahmi/week1/img/tab.png" alt="not file">
             </div>
 
             <div class="menu-right">
-                <a href="#">About Fahmi</a>
+                <a href="index.html">Me, Fahmi!</a>
             </div>
         </nav>
     </header>
 
-    
-    <!-- <h1 class="warna-biru underline">Hello World</h1>
-    <h2>
-        <span id="merah-getih">Hello</span>
-        <span class="warna-merah">World</span>
-    </h2>
-    <h3 id="biru-muda">Hello World</h3>
-    <h4>Hello World</h4>
-    <h5>Hello World</h5>
-    <h6>Hello World</h6>
-    <p>Paragraf</p>
-    <b>Tebal</b>
-    <br>
-    <hr>
-    <i>Miring</i> -->
+<main>
+    <section class="hello">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>Hello!</h4>
+        <h1>My Name's Fahmi Ahmad Fauzi</h1>
+        <h6>Pangabisa kahalangan regulasi Cinta</h6>
+        <br>
+        <a class="btn-action" href="form.html">Follow Me</a>
+    </section>
 
+    <section class="profile">
+        <img src="img/b1.png" alt="no image">
+    </section>
+
+    <section class="aboutme">
+        <h2>About Me</h2>
+        <br>
+        <iframe class="yt" src="https://www.youtube.com/embed/yHhyAYXG_v8"></iframe>
+
+    </section>
+</main>
+<script>
+        function openMenu() {
+            var menu = document.getElementById("menu-mebile");
+            menu.classList.toggle("active-menu")
+        }
+    </script>
 </body>
 </html>
