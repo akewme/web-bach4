@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project</title>
 
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> -->
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         * {
             margin: 0;
         }
 
-     
+
 
         .bg-img {
             opacity: 0.5;
@@ -25,7 +25,7 @@
 
         /* header */
         header {
-            
+
             height: 20px;
             padding: 20px 5%;
             z-index: 1000;
@@ -36,7 +36,7 @@
             color: black;
             padding: 4px 8px;
             font-size: 16px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border-radius: 30px;
         }
 
@@ -67,36 +67,38 @@
             text-align: center
         }
 
-        .nav-left a:hover{
-            background:  rgb(211, 133, 43);
+        .nav-left a:hover {
+            background: rgb(211, 133, 43);
             color: #fff6da
         }
 
-        .nav-right a:hover{
-            background:rgb(211, 133, 43);d1250;
+        .nav-right a:hover {
+            background: rgb(211, 133, 43);
+            d1250;
             color: #fff6da;
         }
 
-        .logo:hover{
+        .logo:hover {
             opacity: .8;
         }
 
 
         /* Icon Menu di hide di akses di desktop app */
         /* main */
-        main{
+        main {
             padding: 5%;
         }
 
         .hello,
-        .profile{
-            width:50%;
-            float:left;
+        .profile {
+            width: 50%;
+            float: left;
         }
 
         .profile img {
             width: 50%;
-            padding: 10% 40%
+            /* padding: 10% 40% */
+            margin: 20%
         }
 
         .hello h6,
@@ -104,13 +106,12 @@
         .hello h4 {
             padding: 120px;
         }
-        
+
         .hello h6 {
             font-size: 20px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin-top: -150px;
-            margin-bottom: 20px;
-            
+            /* margin-top: -100px; */
+
         }
 
         .hello h1 {
@@ -120,7 +121,7 @@
 
         }
 
-        .hello h1:hover{
+        .hello h1:hover {
             color: #e01010;
             opacity: .5;
         }
@@ -129,14 +130,14 @@
             font-size: 20px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             margin-top: -200px;
-           
-            
+
+
         }
 
         /* Btn Contact Me Style */
-        .btn-action{
-            background-color: #ed1250; 
-            color:white;
+        .btn-action {
+            background-color: #ed1250;
+            color: white;
             border-radius: 30px;
             padding: 20px 35px;
             font-size: 17px;
@@ -145,7 +146,7 @@
 
         .btn-action:hover {
             opacity: .8;
-            background:  rgb(211, 133, 43);
+            background: rgb(211, 133, 43);
             color: #042f4b
         }
 
@@ -155,163 +156,170 @@
             width: 80%;
             padding: 10%;
         }
-       
+
         .youtube {
             width: 80%;
             height: 480%
         }
 
-        .nav-mobile a {
+        .nav-mobile {
             display: none;
         }
-        
 
-        @media(max-width:600px) {
+
+        @media (max-width:600px) {
+
+            .nav-mobile {
+                display: block
+            }
+
+            .btn-action {
+                margin: 0px 0px;
+            }
 
             .hello h6,
             .hello h1,
             .hello h4 {
                 padding: 120px 20px;
             }
-            .nav-dekstop {
+
+            #menu-mobile {
                 display: none;
-               
             }
+
             .nav-mobile {
                 display: block
-               
             }
 
             .hello,
             .profile {
                 width: 100%;
             }
-        
-        .hello {
-            margin-top: -30px;
-            text-align: center;
-        }
 
-        .profile {
-            display: none
-        }
+            .hello {
+                margin-top: -30px;
+                text-align: center;
+            }
 
-        .aboutme{
-            margin-top: 50px;
-            width: 100%;
-            padding: 0 
-        }
+            .profile {
+                display: none
+            }
 
-        .youtube {
-            width: 100%;
-            height: 200px
-        }
+            .aboutme {
+                margin-top: 50px;
+                width: 100%;
+                padding: 0
+            }
 
-        .active-menu {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: #ffff;
-            height: 100%;
-            width: 70%;
-            transition: 1s;
-        }
+            .youtube {
+                width: 100%;
+                height: 200px
+            }
 
-        .active-menu .nav-left,
-        .active-menu .nav-left a,
-        .active-menu .nav-right {
-            width: 100%;
-            float: left;
-            padding: 10px;
-            
-        }
+            .active-menu {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: #fff;
+                height: 100%;
+                width: 70%;
+                transition: 1s;
+            }
 
-        .active-menu .nav-left{
-            padding-top: 50px
-        }
+            .active-menu .nav-left,
+            .active-menu .nav-left a,
+            .active-menu .nav-right {
+                width: 100%;
+                float: left;
+                padding: 10px;
+            }
 
-        .active-menu .nav-right{
-            text-align: left
-        }
+            .active-menu .nav-left {
+                padding-top: 50px
+            }
 
-        .active-menu .logo {
-            padding: 10px;
-            position: absolute
+            .active-menu .nav-right {
+                text-align: left
+            }
+
+            .active-menu .logo {
+                padding: 10px;
+                position: absolute
+            }
         }
-    }
-    
     </style>
 </head>
+
 <body>
-        <img class="bg-img" src="picture/citydark.jpg">
+    <img class="bg-img" src="picture/citydark.jpg">
     <header>
         <nav class="nav-mobile">
+            <a href="#">
+                <img alt="Logo" width="70px" src="http://yucoding.com/yucoding-assets/img/brand/blue.png">
+            </a>
+
+            <a href="#" onclick="openMenu()" style="float: right;z-index:100000;width:50px;height:50px">
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                </svg>
+            </a>
+        </nav>
+        <nav class="nav-desktop" id="menu-mobile">
+            <div class="nav-left">
+                <a href="index.html" class="menu-left">Home</a>
+                <a href="#">How It Work</a>
+                <a href="#">Community</a>
+                <a href="#">Visit Our Salon</a>
+                <a href="register.html">Register</a>
+            </div>
+            <div class="logo">
                 <a href="#">
                     <img alt="Logo" width="70px" src="http://yucoding.com/yucoding-assets/img/brand/blue.png">
                 </a>
+            </div>
+            <div class="nav-right">
+                <a href="#">About Yucoding</a>
+            </div>
+        </nav>
 
-                <a onclick="openMenu()" href="#" style="float: right">
-                        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
-                            viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path
-                                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                        </svg>
-                    </a>
-                </nav>
-                <nav id="menu-mobile" class="nav-desktop">
-                    <div class="nav-left">
-                        <a href="index.html" class="menu-left">Home</a>
-                        <a href="#">How It Work</a>
-                        <a href="#">Community</a>
-                        <a href="#">Visit Our Salon</a>
-                        <a href="register.html">Register</a>
-                    </div>
-                    <div class="logo">
-                        <a href="#">
-                            <img alt="Logo" width="70px" src="http://yucoding.com/yucoding-assets/img/brand/blue.png">
-                        </a>
-                    </div>
-                    <div class="nav-right">
-                        <a href="#">About Yucoding</a>
-                    </div>
-                </nav>
-            
     </header>
     <main>
         <section class="hello">
             <br>
             <br>
             <br>
-        <h6>Hi Smartpeople</h6>
-        <h1>My Name's Dhafi Yarist</h1>
-        <h4>WEB Developer</h4>
-        <br>
-        <a class="btn-action" href="register.html">
-            Contact Me
-        </a>
+            <h6>Hi Smartpeople</h6>
+            <h1>My Name's Dhafi Yarist</h1>
+            <h4>WEB Developer</h4>
+            <br>
+            <a class="btn-action" href="register.html">
+                Contact Me
+            </a>
         </section>
 
         <section class="profile">
-                <img src="picture/guest.png" alt="profile">
-            </section>
-    
-    <section class="aboutme">
-        <br>
-        <h1>About Me</h1>
-        <br>
-        <iframe class="youtube" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-        </iframe>
-    </section>
+            <img src="picture/guest.png" alt="profile">
+        </section>
+
+        <section class="aboutme">
+            <br>
+            <h1>About Me</h1>
+            <br>
+            <iframe class="youtube" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </section>
     </main>
+
     <script>
-     function openMenu() {
-         var menu = document.getElemntById("menu-mebile");
-         menu.classList.toogle("active-menu")
-     }
+        function openMenu() {
+            var menu = document.getElementById("menu-mebile");
+            menu.classList.toggle("active-menu");
+        }
     </script>
-   
 </body>
 
 </html>
