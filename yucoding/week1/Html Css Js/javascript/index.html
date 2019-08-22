@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="data-hasil"></div>
+
+    <!-- <script src="main.js"></script> -->
+
+    <script>
+        // kode Javascript disini
+        // Variable
+
+
+        const Variable1 = "" // Variable Tetap
+        var Variable2 = "" // buat global variable
+        let Variable3 = "" // local variable
+
+        // Type Data
+        // let number = 123;
+        // + , - , * , / div
+        // let string = "string"
+
+        let object = {
+            nama: "Ari Bahtiar",
+            alamat: "Tasik",
+            ttl: {
+                tempat: {
+                    provisi: " Jawa Barat"
+                },
+                tanggal: new Date()
+            }
+        }
+
+        let hasil = "Nama Saya :" + object.nama + " ---- Alamat : " + object.alamat;
+
+        // document.getElementById("data-hasil").innerHTML = hasil;
+
+
+        let array = [object, "string", 100, new Date()];
+
+        // console.log(array);
+
+        // Function
+
+        function hello(data) {
+            return console.log("Hello World");
+        }
+
+        let func = (data) => {
+            return console.log(data);
+        }
+
+        func(object);
+
+        // Perulangan
+        // Percabangan
+    </script>
+</body>
+
+</html>
