@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        /* background: #2e656d; */
+    }
+    
+    header {
+            background: #2e656d;
+            height: 90px;
+            padding: 10px 2%;
+            z-index: 1000;
+        }
+    .bg-img{
+        opacity: 0.6;
+        width: 100%;
+        z-index: -2;
+        position: absolute;
+    }
+    .nav-left{
+        width: 100%;
+        background-color: #2e656d; 
+        overflow: auto
+        position: fixed
+        z-index: 10;
+    }
+    .btn {
+            float: left;
+            border: none;
+            background-color: inherit;
+            padding: 20px 25px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 25px;
+        }
+    .btn:hover {
+        background: #49beb7;
+    }
+    a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 5%;
+            font-size: 16px
+            text-align: center;
+        }    
+       /* awal */
+       .dropdown, .dropdown1, .dropdown2  {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown, .dropdown1, .dropdown2 {
+    float: left;
+            border: none;
+            background-color: inherit;
+            padding: 20px 40px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 15px;
+}
+
+ .dropbtn, .dropbtn1, .dropbtn2 {
+  cursor: pointer;
+  font-size: 14px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 2px 15px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropdown1:hover .dropbtn1, .dropdown2:hover .dropbtn2,  .dropbtn:hover, .dropbtn1:hover, .dropbtn2:hover {
+  background-color:  #49beb7;
+}
+.dropdown:hover, .dropdown1:hover, .dropdown2:hover{
+    background: #49beb7;
+}
+
+.dropdown-content, .dropdown-content1, .dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #49beb7;
+  min-width: 160px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a, .dropdown-content1 a, .dropdown-content2 a {
+  float: none;
+  color: black;
+  padding: 20px 25px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover, .dropdown-content1 a:hover, .dropdown-content2 a:hover {
+  background-color: #ddd;
+  padding:  20px 25px;
+}
+.show, .show1, .show2 {
+  display: block;
+}
+        /* akhir */
+
+
+</style>
+<body>
+    <header>       
+        <nav>
+            <div class="nav-left">
+                <a > <img width="25px" src="Gambar/koperasi.png"> <i class="fa fa home"> </i> KOPERASI SIMPAN PINJAM </a>
+                <br>
+                <br>
+                <a href="#" class="btn"> <img width="19px" src="Gambar/an.png"> <i class="fa fa home"> </i> ANGGOTA</a>
+                <div href="#" class="dropdown"> 
+                    <button class="dropbtn" onclick="myFunction() "> <img width="19px" src="Gambar/sim.png"> SIMPANAN
+                        <i class="fa fa-caret-down"></i>                        
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="">lin 1</a>         
+                        <a href="">lin 2</a>               
+                    </div>
+                </div>
+                <div href="#" class="dropdown1"> 
+                    <button class="dropbtn1" onclick="myFunction1() "> <img width="19px" src="Gambar/pi.png"> PINJAMAN
+                        <i class="fa fa-caret-down"></i>                        
+                    </button>
+                    <div class="dropdown-content1" id="myDropdown1">
+                        <a href="">lin 1</a>         
+                        <a href="">lin 2</a>               
+                    </div>
+                </div>
+                <div href="#" class="dropdown2"> 
+                    <button class="dropbtn2" onclick="myFunction2() "> <img width="19px" src="Gambar/sh.png"> SHU
+                        <i class="fa fa-caret-down"></i>                        
+                    </button>
+                    <div class="dropdown-content2" id="myDropdown2">
+                        <a href="">lin 1</a>         
+                        <a href="">lin 2</a>               
+                    </div>
+                </div>
+                <div href="#" class="dropdown"> 
+                    <button class="dropbtn" onclick="myFunction() "> <img width="19px" src="Gambar/sim.png"> AKUNTANSI
+                        <i class="fa fa-caret-down"></i>                        
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="">lin 1</a>         
+                        <a href="">lin 2</a>               
+                    </div>
+                </div>
+                <div href="#" class="dropdown"> 
+                    <button class="dropbtn" onclick="myFunction() "> <img width="19px" src="Gambar/pe.png"> PENGATURAN
+                        <i class="fa fa-caret-down"></i>                        
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="">lin 1</a>         
+                        <a href="">lin 2</a>               
+                    </div>
+                </div>
+                <a href="#" class="btn"> <img width="19px" src="Gambar/lo.png"> <i class="fa fa-home"></i> LOGOUT</a>
+            </div>
+        </nav>
+        <!-- <p>hI</p> -->
+    </header>
+    <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn')) {
+              var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                  myDropdown.classList.remove('show');
+                }
+              }
+            }
+            /* awal 1 */
+            function myFunction1() {
+              document.getElementById("myDropdown1").classList.toggle("show1");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn1')) {
+              var myDropdown1 = document.getElementById("myDropdown1");
+                if (myDropdown1.classList.contains('show1')) {
+                  myDropdown1.classList.remove('show1');
+                }
+              }
+            }
+            /* akhir 1 */
+            /* akhir 2 */
+            function myFunction2() {
+              document.getElementById("myDropdown2").classList.toggle("show2");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn2')) {
+              var myDropdown1 = document.getElementById("myDropdown2");
+                if (myDropdown1.classList.contains('show2')) {
+                  myDropdown1.classList.remove('show2');
+                }
+              }
+            }
+            /* akhir 2 */
+
+
+            
+            </script>
+    
+</body>
+</html>
