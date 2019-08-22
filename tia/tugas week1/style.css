@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #00293c;
+    background-color: #00283B;
+}
+
+header {
+    background: #2e656d;
+    height: 60px;
+    padding: 12px 5%;
+    z-inder: 1000
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 5%;
+    font-size: 16px
+}
+
+.logo,
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+    text-align: right;
+}
+
+.nav-left,
+.nav-right {
+    width: 40%;
+}
+
+.logo {
+    width: 10%;
+}
+/* dipake img */
+img {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    float: right;
+    margin: 140px
+} 
+
+h6 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin: 190px
+
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Lucida Bright";
+    color: white;
+    margin: 190px;
+} 
+
+/* teks{
+    text-transform: lowercase;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 16px;
+    float: left;
+}      */
+ /* #h1-saya {
+    position: absolute;
+    width: 684px;
+    height: 337px;
+    z-index: 1;
+    left: 7px;
+    top: 217px;
+} 
+
+
+ #h1-saya #form form #register {
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #333;
+    color: #000;
+} */
+
+/* body,
+td,
+th {
+    color: #FFFFFF;
+} */
+
+
+/* 
+ Register btn
+body {
+    overflow: hidden;
+}
+
+.btn-register {
+    background: pink;
+    color: rgb(32, 32, 32);
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 24px;
+}
+
+.btn-register:hover {
+    opacity: .8;
+    background: palevioletred;
+} */

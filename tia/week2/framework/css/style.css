@@ -1,0 +1,58 @@
+body{
+    background: black
+}
+.bg-img{
+    margin: -100px;
+    background-image: url('../img/bg1.jpg');
+    min-height: 700px;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+}
+.yu-navbar{
+    height: 100px;
+    margin: 0 10%;
+    z-index: 10000; 
+}
+#about{
+    min-height: 600px;
+    padding-top: 100px;
+}
+#about2{
+    padding-top: 100px;
+    background-image: url('../img/b4.jpg');
+    height: auto;
+    width: 100000px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+#service{
+    min-height: 600px;
+    padding-top: 100px;
+}
+.srvc{
+    text-align: center
+}
+#service2{
+    background-image: url('../img/b3.jpg');
+    width: 100000px;
+    height: auto;
+    position: relative;
+    background-repeat: no-repeat;
+}
+#fortopolio{
+    min-height: 700px;
+    padding-top: 100px;
+}
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+  #testimonial{
+    min-height: 700px;
+    padding-top: 100px;
+}
