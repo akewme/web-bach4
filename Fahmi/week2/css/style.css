@@ -1,0 +1,31 @@
+body{
+    background: black;
+}
+.bg-img{
+    margin-top: -90px;
+    background-image: url("../img/bg1.jpg");
+    min-height: 1000px;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%)
+}
+
+.yu-navbar{
+    height: 90px;
+    padding: 0 7%;
+    z-index: 10000;
+}
+
+#about{
+    min-height: 680px;
+    padding-top: 80px; 
+}
+
+#service{
+    background: none;
+    min-height: 600px;
+}
+
+#testimonial{
+    min-height: 600px;
+}
