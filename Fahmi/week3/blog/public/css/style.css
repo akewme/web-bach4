@@ -1,0 +1,108 @@
+body{
+    background: black;
+}
+
+.bg-img{
+    margin-top: -90px;
+    background-image: url("../img/bg1.jpg");
+    min-height: 1000px;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.yu-navbar{
+    height: 70px;
+    width: 100%;
+    padding: 0 7%;
+    z-index: 10000;
+    position: fixed;
+    top: 0%;
+    background: rgb(41, 52, 98, 0.5);
+    /* opacity: .7; */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.satisfy{
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+}
+
+.aclonica{
+    font-family: 'Aclonica', sans-serif;
+    font-size: 18px
+}
+
+#about{
+    min-height: 680px;
+    padding-top: 80px; 
+    position: relative;
+}
+
+#service{
+    background: none;
+    min-height: 600px;
+}
+
+#testimonial{
+    min-height: 600px;
+}
+
+/* contact */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* end contact */
+
+.bg-about{position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: url("../img/b2.jpg");
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bg-testimonial{position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: url("../img/b3.jpg");
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1000;
+}
+.testimonial{
+    position: relative;
+    margin-top: 50px;
+}
