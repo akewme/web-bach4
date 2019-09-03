@@ -16,6 +16,11 @@ body{
     z-index: 10000;
 }
 
+.ft-alus{
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+}
+
 #about{
     min-height: 680px;
     padding-top: 80px; 
