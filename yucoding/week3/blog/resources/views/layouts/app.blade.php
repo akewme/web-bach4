@@ -12,16 +12,17 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -34,13 +35,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user') }}">Users</a>
+                            <a class="nav-link @if(Request::is('home')) active @endif" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user') }}">Artikel</a>
+                            <a class="nav-link @if(Request::is('admin/post')) active @endif" href="/admin/post">Post</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user') }}">Komentar</a>
+                            <a class="nav-link @if(Request::is('admin/comment')) active @endif" href="/admin/comment">Comment</a>
                         </li>
                     </ul>
 

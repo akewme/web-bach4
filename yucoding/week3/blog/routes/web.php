@@ -11,34 +11,22 @@
 |
 */
 
-
-// Route::get("/", function(){
-//     return "Home";
-// });
-
-// Route::get("/login", function(){
-//     return "Login";
-// });
-
-// // Blog
-// Route::get("/blog", function($nama){
-//     return "Blog";
-// });
-
-
-
-
-
-
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix("admin")->group( function() {
+
+    Route::get("post","PostController@index");
+    
+    Route::post("post","PostController@create")->name("create_post");
 
 
-// Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('/user', 'UserController@index')->name('user');
-// Route::get('/user/edit', 'UserController@edit')->name('user');
+    Route::get("comment","CommentController@index");
+    // 'admin/post/
+});
