@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #demo {
+            font-size: 40px
+        }
+
+        .active {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+
+    <button onclick="ubahWarna()">
+        Ubah warna ke merah
+    </button>
+</body>
+<!-- Jquery -->
+<script src="../framework/js/jquery-3.4.1.min.js"></script>
+<script>
+    $("#demo").html("Hello World");
+
+    function ubahWarna() {
+        $("#demo").toggleClass("active");
+    }
+</script>
+<script>
+    // let demo = document.getElementById("demo");
+
+    // let hello = "";
+
+    // for (let i = 1; i <= 10; i++) {
+    //     hello += "Hello Word <br>";
+    // }
+
+    // demo.innerHTML = hello;
+
+    // let array = [6, 4, 3, 4];
+
+    // let hello = "";
+
+    // for (let i = 0; i < array.length; i++) {
+    //     hello += "Hello Word " + array[i] + " <br>";
+    // };
+
+    // demo.innerHTML = hello;
+
+    // function
+    // function namaFunction(parameter1,parameter2,dst){
+    //     return callback;
+    // }
+
+    // Percabangan
+
+    // let warnaDef = "black";
+
+    // function ubahWarna(warna) {
+    //     if (warna == warnaDef) {
+    //         demo.style = "color:" + "black";
+    //         warnaDef = "black";
+    //     } else {
+    //         demo.style = "color:" + warna;
+    //         warnaDef = warna;
+    //     }
+    // }
+
+
+    // Percabangan
+
+    // let ipk = 4;
+
+    // if (ipk == 4) {
+    //     demo.innerHTML = "IPK anda 4";
+    // } else {
+    //     demo.innerHTML = "IPK anda bukan 4";
+    // }
+
+    // ==
+    // >
+    // <
+    // >=
+    // <=
+    // <>
+
+    // let gender = "L";
+
+    // if (gender == "L") {
+    //     alert("Saya Laki Laki")
+    // }
+    // 
+</script>
+
+
+</html>

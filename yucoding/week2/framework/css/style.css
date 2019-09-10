@@ -48,7 +48,7 @@
 /* Animate */
 
 body {
-    background: black
+    background: black;
 }
 
 .bg-img {
@@ -108,13 +108,10 @@ body {
     font-size: 2em;
 }
 
-#about {
+#about,
+#service {
     min-height: 600px;
     background: #111
-}
-
-#sercvice {
-    min-height: 600px
 }
 
 .progress {
