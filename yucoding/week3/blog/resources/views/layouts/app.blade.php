@@ -44,7 +44,6 @@
                             <a class="nav-link @if(Request::is('admin/comment')) active @endif" href="/admin/comment">Comment</a>
                         </li>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -85,5 +84,8 @@
             @yield('content')
         </main>
     </div>
+
+    @yield('js-after')
+    
 </body>
 </html>

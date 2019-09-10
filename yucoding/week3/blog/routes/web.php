@@ -11,22 +11,35 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
+Auth::routes(['register' => false]);
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix("admin")->group( function() {
+Route::middleware("auth")->prefix("admin")->group( function() {
 
+     // Read banyak Artikel
     Route::get("post","PostController@index");
-    
+    // Create
     Route::post("post","PostController@create")->name("create_post");
+    //  update
+    Route::post("post/{id}","PostController@update");
 
-
+    // Delete
+    Route::get("post/{id}/delete","PostController@delete");
 
     Route::get("comment","CommentController@index");
     // 'admin/post/
 });
+
+// Public
+
+// Read 1 Artikel 
+Route::get("p/{id}","PostController@show_single");
+
