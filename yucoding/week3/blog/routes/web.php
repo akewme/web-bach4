@@ -31,6 +31,9 @@ Route::middleware("auth")->prefix("admin")->group( function() {
     //  update
     Route::post("post/{id}","PostController@update");
 
+    // Data Single 
+    Route::get("data/{id}","PostController@data_single");
+
     // Delete
     Route::get("post/{id}/delete","PostController@delete");
 

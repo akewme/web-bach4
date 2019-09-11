@@ -87,11 +87,11 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $p->title }}</h5>
                             <h6 class="card-subtitle mb-2 text-muted"> {{ $p->name }}</h6>
-                            <p class="card-text">{{ $p->body }}</p>
+                            <p class="card-text">{{ str_limit($p->body,200) }}</p>
                             
                             <a href="/p/{{ $p->id }}" class="card-link text-primary">View</a>
                             
-                            <a href="#" onclick="editPost('{{ json_encode($p) }}')" 
+                            <a href="#" onclick="editPost('{{ $p->id }}')" 
                                         class="card-link text-success">Edit</a>
                                         
                             <a href="/admin/post/{{ $p->id }}/delete" 
@@ -122,7 +122,13 @@
     <script>
         // alert("Testig Js After")
 
-        function editPost(data){
+        function editPost(id){
+
+            $.get("/data/"+id)
+                .done((res) => {
+
+                });
+
             // console.log(data)
             $("#modalForm").modal("show");
             // Data = Json,  jadi harus di parse terlebih dulu
