@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/getDataInfinite',"PostController@getDataInfinite");
+
+// Route::get("/","PostController@getData");
+
 // Auth::routes();
 Auth::routes(['register' => false]);
 

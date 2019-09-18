@@ -9,20 +9,40 @@ use Auth;
 class PostController extends Controller
 {
     //
-    public function index(){
+
+
+
+    public function getDataInfinite(){
+
+        $posting = DB::table("post")
+            ->join("users","users.id","post.user_id")
+            ->select("post.*","users.name")
+            ->orderBy("post.id","DESC")
+            ->paginate(2);
+        
+        $view = view('infiniteScroll',compact('posting'))->render();
+        
+        return response()->json(['html'=>$view]);
+        
+        
+    }
+
+
+    public function index(Request $req){
         
         $posting = DB::table("post")
         ->join("users","users.id","post.user_id")
         ->select("post.*","users.name")
         ->orderBy("post.id","DESC")
         ->paginate(9);
-
+        
         return view("admin.post",compact('posting'));
     }
     public function create(Request $req){
         // dd($req);
         $query = DB::table("post")->insert([
             'title' => $req->title,
+            'kategori' => $req->kategori,
             'body' => $req->body,
             'user_id' => Auth::user()->id
         ]);
@@ -35,6 +55,7 @@ class PostController extends Controller
         ->where("id",$id)
         ->update([
             'title' => $req->title,
+            'kategori' => $req->kategori,
             'body' => $req->body,
             'user_id' => Auth::user()->id
         ]);
@@ -63,4 +84,12 @@ class PostController extends Controller
 
         return view("single",compact("post"));
     }
+    public function data_single($id){
+        
+        $post = DB::table("post")
+        ->where("id",$id)
+        ->first();
+
+        return json_encode($post);
+    }   
 }

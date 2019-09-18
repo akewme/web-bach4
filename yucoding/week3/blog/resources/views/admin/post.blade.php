@@ -55,6 +55,16 @@
                             <input id="title" type="text" name="title" class="form-control" placeholder="Title Here">
                         </div>
                         <div class="form-group">
+                            <select id="kategori" name="kategori" class="form-control">
+                                <option value="">Pilih Kategori</option>
+                                <option value="Website">Website</option>
+                                <option value="Games">Games</option>
+                                <option value="Apps">Apps</option>
+                                <option value="Futsal">Futsal</option>
+                                <option value="Berita">Berita</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Body</label>
                             <textarea id="body" name="body" 
                                       cols="30" 
@@ -87,6 +97,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $p->title }}</h5>
                             <h6 class="card-subtitle mb-2 text-muted"> {{ $p->name }}</h6>
+
+                            <a href="/k/{{ $p->kategori }}">#{{ $p->kategori }}</a>
+
                             <p class="card-text">{{ str_limit($p->body,200) }}</p>
                             
                             <a href="/p/{{ $p->id }}" class="card-link text-primary">View</a>
@@ -124,20 +137,19 @@
 
         function editPost(id){
 
-            $.get("/data/"+id)
-                .done((res) => {
-
+            $.get("/admin/data/"+id)
+                .done((data) => {
+                        // console.log(data)
+                        $("#modalForm").modal("show");
+                        // Data = Json,  jadi harus di parse terlebih dulu
+                        var d = JSON.parse(data);
+                        // console.log(d);
+                        // Set Value form 
+                        $("#kategori").val(d.kategori);
+                        $("#title").val(d.title);
+                        $("#body").val(d.body);
+                        $("#form").attr("action",`{{ url('admin/post')}}/${d.id}`);
                 });
-
-            // console.log(data)
-            $("#modalForm").modal("show");
-            // Data = Json,  jadi harus di parse terlebih dulu
-            var d = JSON.parse(data);
-            // console.log(d);
-            // Set Value form 
-            $("#title").val(d.title);
-            $("#body").val(d.body);
-            $("#form").attr("action",`{{ url('admin/post')}}/${d.id}`);
         }
     </script>
 @endsection

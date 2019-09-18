@@ -16,13 +16,13 @@ class CreatePostTable extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("title");
+            $table->string("kategori",100)->nullable();
             $table->longText("body");
-
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                   ->references('id')
                   ->on('users');
-
+            $table->integer("viewer")->nullable();
             $table->timestamps();
         });
     }
